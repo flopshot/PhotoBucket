@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
+// RetroFit Api with base url flickr.com
 struct FlickrApi {
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let apiKey = "a6d819499131071f158fd740860a5a88"
@@ -48,7 +50,7 @@ struct FlickrApi {
         return flickrURL(method: .interestingPhotos, parameters: ["extras":"url_h,date_taken"])
     }
     
-    static func photos(fromJson data: Data) -> PhotosResult {
+    static func photos(fromJson data: Data, into context: NSManagedObjectContext) -> PhotosResult {
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
             guard
@@ -60,7 +62,7 @@ struct FlickrApi {
             
             var finalPhotos = [Photo]()
             for photoJSON in photosArray {
-                if let photo = photo(fromJson: photoJSON) {
+                if let photo = photo(fromJson: photoJSON, into: context) {
                     finalPhotos.append(photo)
                 }
             }
@@ -74,7 +76,7 @@ struct FlickrApi {
         }
     }
     
-    private static func photo(fromJson json: [String:Any]) -> Photo? {
+    private static func photo(fromJson json: [String:Any], into context: NSManagedObjectContext) -> Photo? {
         guard
             let title = json["title"] as? String,
             let photoID = json["id"] as? String,
@@ -85,7 +87,28 @@ struct FlickrApi {
                 return nil
         }
         
-        return Photo(title: title, photoID: photoID, remoteURL: url, dateTaken: dateTaken)
+        let fetchingRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        let preicate = NSPredicate(format: "\(#keyPath(Photo.photoID)) == \(photoID)")
+        fetchingRequest.predicate = preicate
+        
+        var fetchedPhotos: [Photo]?
+        context.performAndWait {
+            fetchedPhotos = try? fetchingRequest.execute()
+        }
+        if let existingPhoto = fetchedPhotos?.first {
+            return existingPhoto
+        }
+        
+        var photo: Photo!
+        context.performAndWait {
+            photo = Photo(context: context)
+            photo.title = title
+            photo.photoID = photoID
+            photo.remoteURL = url as NSURL
+            photo.dateTaken = dateTaken as NSDate
+        }
+        
+        return photo
     }
 }
 

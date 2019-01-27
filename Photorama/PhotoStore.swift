@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 enum PhotosResult {
     case success([Photo])
@@ -22,7 +23,19 @@ enum PhotoError: Error {
     case imageCreationError
 }
 
+// PhotoStore is like a repository that will check cache before fetching over network
 class PhotoStore {
+    
+    let imageStore = ImageStore()
+    let persistenceContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Photorama")
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                print ("Error setting up Core Data: \(error)")
+            }
+        }
+        return container
+    }()
 
     private let session: URLSession = {
         let config = URLSessionConfiguration.default
@@ -34,7 +47,15 @@ class PhotoStore {
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
-            let result = self.processPhotosrequest(data: data, error: error)
+            var result = self.processPhotosrequest(data: data, error: error)
+            
+            if case .success = result {
+                do {
+                    try self.persistenceContainer.viewContext.save()
+                } catch let error {
+                    result = .failure(error)
+                }
+            }
             OperationQueue.main.addOperation {
                 completion(result)
             }
@@ -43,13 +64,27 @@ class PhotoStore {
     }
     
     func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
-        let photoURL = photo.remoteUrl
-        let request = URLRequest(url: photoURL)
+        let photoKey = photo.photoID ?? ""
+        if let image = imageStore.image(forKey: photoKey) {
+            OperationQueue.main.addOperation {
+                completion(.success(image))
+            }
+        }
+        
+        guard let photoURL = photo.remoteURL else {
+            preconditionFailure()
+        }
+        let request = URLRequest(url: photoURL as URL)
         
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
             
             let result = self.processImageRequest(data: data, error: error)
+            
+            if case let .success(image) = result {
+                self.imageStore.setImage(image, forKey: photoKey)
+            }
+            
             OperationQueue.main.addOperation {
                 completion(result)
             }
@@ -74,6 +109,23 @@ class PhotoStore {
         guard let jsonData = data else {
             return .failure(error!)
         }
-        return FlickrApi.photos(fromJson: jsonData)
+        return FlickrApi.photos(fromJson: jsonData, into: persistenceContainer.viewContext)
+    }
+    
+    func fetchAllPhotos(completion: @escaping (PhotosResult) -> Void) {
+        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
+        let sortbyDateTaken = NSSortDescriptor(key: #keyPath(Photo.dateTaken), ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortbyDateTaken]
+        
+        let viewContext = persistenceContainer.viewContext
+        viewContext.perform {
+            do {
+                let allPhotos = try viewContext.fetch(fetchRequest)
+                completion(.success(allPhotos))
+            } catch {
+                completion(.failure(error))
+            }
+        }
     }
 }
