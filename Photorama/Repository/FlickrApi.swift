@@ -21,7 +21,7 @@ struct FlickrApi {
     }()
     
     private static func flickrURL(method: Method,
-                                  parameters: [String:String]?) -> URL {
+                                  parameters: [String:String]?) -> (URL, String) {
         var components = URLComponents(string: baseURLString)!
         var queryItems = [URLQueryItem]()
         
@@ -43,12 +43,16 @@ struct FlickrApi {
             }
         }
         components.queryItems = queryItems
-        return components.url!
+        let url = components.url!
+        let urlString = url.absoluteString
+        return (url, urlString)
     }
     
     static var interestingPhotosURL: URL {
-        return flickrURL(method: .interestingPhotos, parameters: ["extras":"url_h,date_taken"])
+        return flickrURL(method: .interestingPhotos, parameters: ["extras":"url_h,date_taken"]).0
     }
+    
+    static var photosUrlString: String = flickrURL(method: .interestingPhotos, parameters: ["extras":"url_h,date_taken"]).1
     
     static func photos(fromJson data: Data, into context: NSManagedObjectContext) -> PhotosResult {
         do {

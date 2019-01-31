@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E45FB21F402193044111301 /* Pods_PhotoramaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A5A630F9F18720555C65B0 /* Pods_PhotoramaTests.framework */; };
+		76784D94E014313FAF02171A /* Pods_PhotoramaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A218A52176E1FB8C5C0297 /* Pods_PhotoramaUITests.framework */; };
+		84D03019196FF4CC3733FB95 /* Pods_Photorama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BCB747FB3D8D68B836FBF9 /* Pods_Photorama.framework */; };
+		B70B060221FE2F5D0096453F /* PhotosRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060121FE2F5D0096453F /* PhotosRepo.swift */; };
+		B70B060421FE31FE0096453F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060321FE31FE0096453F /* ImageCache.swift */; };
+		B70B060621FE34650096453F /* PhotoramaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060521FE34650096453F /* PhotoramaApi.swift */; };
+		B70B060821FE3EB70096453F /* Foto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060721FE3EB70096453F /* Foto.swift */; };
+		B70B060D21FE6D380096453F /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060C21FE6D380096453F /* PhotoDetailViewModel.swift */; };
+		B70B060F21FE6D450096453F /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060E21FE6D450096453F /* PhotosListViewModel.swift */; };
 		B797C66921F93CB50058B165 /* Photorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B797C66721F93CB50058B165 /* Photorama.xcdatamodeld */; };
 		B797C66C21F944150058B165 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797C66A21F944150058B165 /* Photo+CoreDataClass.swift */; };
 		B797C66D21F944150058B165 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797C66B21F944150058B165 /* Photo+CoreDataProperties.swift */; };
@@ -43,6 +52,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26BCB747FB3D8D68B836FBF9 /* Pods_Photorama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photorama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3340BF02C5A84C4DD69C8574 /* Pods-Photorama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photorama.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Photorama/Pods-Photorama.debug.xcconfig"; sourceTree = "<group>"; };
+		50814ABB5C6260BC30E75F28 /* Pods-PhotoramaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoramaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoramaUITests/Pods-PhotoramaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6207ECFD1CA39ACA00D63803 /* Pods-PhotoramaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoramaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoramaUITests/Pods-PhotoramaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		86F4599CB78EDFF0BAAD0D0D /* Pods-PhotoramaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoramaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoramaTests/Pods-PhotoramaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98B4C589BD2203AF83F9066B /* Pods-PhotoramaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoramaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoramaTests/Pods-PhotoramaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8A218A52176E1FB8C5C0297 /* Pods_PhotoramaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoramaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70B060121FE2F5D0096453F /* PhotosRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepo.swift; sourceTree = "<group>"; };
+		B70B060321FE31FE0096453F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		B70B060521FE34650096453F /* PhotoramaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaApi.swift; sourceTree = "<group>"; };
+		B70B060721FE3EB70096453F /* Foto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foto.swift; sourceTree = "<group>"; };
+		B70B060C21FE6D380096453F /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		B70B060E21FE6D450096453F /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
 		B797C66821F93CB50058B165 /* Photorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photorama.xcdatamodel; sourceTree = "<group>"; };
 		B797C66A21F944150058B165 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B797C66B21F944150058B165 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -65,6 +87,8 @@
 		B7E3357221F7FFDE003736BA /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		B7E3357421F88B16003736BA /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		B7E3357621F89284003736BA /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
+		CB2541E298B2F8102195BD8E /* Pods-Photorama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photorama.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photorama/Pods-Photorama.release.xcconfig"; sourceTree = "<group>"; };
+		D0A5A630F9F18720555C65B0 /* Pods_PhotoramaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoramaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D03019196FF4CC3733FB95 /* Pods_Photorama.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E45FB21F402193044111301 /* Pods_PhotoramaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +112,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76784D94E014313FAF02171A /* Pods_PhotoramaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5498FF643BF5EFAE1B74E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3340BF02C5A84C4DD69C8574 /* Pods-Photorama.debug.xcconfig */,
+				CB2541E298B2F8102195BD8E /* Pods-Photorama.release.xcconfig */,
+				86F4599CB78EDFF0BAAD0D0D /* Pods-PhotoramaTests.debug.xcconfig */,
+				98B4C589BD2203AF83F9066B /* Pods-PhotoramaTests.release.xcconfig */,
+				6207ECFD1CA39ACA00D63803 /* Pods-PhotoramaUITests.debug.xcconfig */,
+				50814ABB5C6260BC30E75F28 /* Pods-PhotoramaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		565072A395B86268AC1D19A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26BCB747FB3D8D68B836FBF9 /* Pods_Photorama.framework */,
+				D0A5A630F9F18720555C65B0 /* Pods_PhotoramaTests.framework */,
+				A8A218A52176E1FB8C5C0297 /* Pods_PhotoramaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B70B060021FE2EDF0096453F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B7E3356A21F674DF003736BA /* FlickrApi.swift */,
+				B70B060121FE2F5D0096453F /* PhotosRepo.swift */,
+				B70B060321FE31FE0096453F /* ImageCache.swift */,
+				B70B060521FE34650096453F /* PhotoramaApi.swift */,
+				B70B060721FE3EB70096453F /* Foto.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B70B060921FE6C6B0096453F /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				B7E3357221F7FFDE003736BA /* PhotoCell.swift */,
+				B7E3353E21F66AED003736BA /* PhotosViewController.swift */,
+				B70B060E21FE6D450096453F /* PhotosListViewModel.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		B70B060A21FE6CA30096453F /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B7E3357621F89284003736BA /* PhotoInfoViewController.swift */,
+				B70B060C21FE6D380096453F /* PhotoDetailViewModel.swift */,
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		B70B060B21FE6CED0096453F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7E3354521F66AEE003736BA /* LaunchScreen.storyboard */,
+				B7E3354021F66AED003736BA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B7E3353021F66AEC003736BA = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +191,8 @@
 				B7E3355021F66AEE003736BA /* PhotoramaTests */,
 				B7E3355B21F66AEE003736BA /* PhotoramaUITests */,
 				B7E3353A21F66AED003736BA /* Products */,
+				2A5498FF643BF5EFAE1B74E1 /* Pods */,
+				565072A395B86268AC1D19A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,18 +209,16 @@
 		B7E3353B21F66AED003736BA /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				B70B060B21FE6CED0096453F /* View */,
+				B70B060A21FE6CA30096453F /* PhotoDetail */,
+				B70B060921FE6C6B0096453F /* PhotosList */,
+				B70B060021FE2EDF0096453F /* Repository */,
 				B7E3353C21F66AED003736BA /* AppDelegate.swift */,
-				B7E3353E21F66AED003736BA /* PhotosViewController.swift */,
-				B7E3354021F66AED003736BA /* Main.storyboard */,
-				B7E3356A21F674DF003736BA /* FlickrApi.swift */,
 				B7E3356C21F6865A003736BA /* PhotoStore.swift */,
-				B7E3357621F89284003736BA /* PhotoInfoViewController.swift */,
 				B7E3354321F66AEE003736BA /* Assets.xcassets */,
-				B7E3354521F66AEE003736BA /* LaunchScreen.storyboard */,
 				B7E3354821F66AEE003736BA /* Info.plist */,
 				B7E3357021F7FAE3003736BA /* PhotoDataSource.swift */,
 				B7E3357421F88B16003736BA /* ImageStore.swift */,
-				B7E3357221F7FFDE003736BA /* PhotoCell.swift */,
 				B797C66721F93CB50058B165 /* Photorama.xcdatamodeld */,
 			);
 			path = Photorama;
@@ -159,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E3356121F66AEE003736BA /* Build configuration list for PBXNativeTarget "Photorama" */;
 			buildPhases = (
+				3ADEFF9580A50AB9B589CCA4 /* [CP] Check Pods Manifest.lock */,
 				B7E3353521F66AED003736BA /* Sources */,
 				B7E3353621F66AED003736BA /* Frameworks */,
 				B7E3353721F66AED003736BA /* Resources */,
+				70DA65B8402A4C1CB40F18B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E3356421F66AEE003736BA /* Build configuration list for PBXNativeTarget "PhotoramaTests" */;
 			buildPhases = (
+				8655CD77796646361E47528F /* [CP] Check Pods Manifest.lock */,
 				B7E3354921F66AEE003736BA /* Sources */,
 				B7E3354A21F66AEE003736BA /* Frameworks */,
 				B7E3354B21F66AEE003736BA /* Resources */,
@@ -194,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E3356721F66AEE003736BA /* Build configuration list for PBXNativeTarget "PhotoramaUITests" */;
 			buildPhases = (
+				6E353A1209723E984C59D580 /* [CP] Check Pods Manifest.lock */,
 				B7E3355421F66AEE003736BA /* Sources */,
 				B7E3355521F66AEE003736BA /* Frameworks */,
 				B7E3355621F66AEE003736BA /* Resources */,
@@ -278,21 +372,136 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ADEFF9580A50AB9B589CCA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Photorama-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E353A1209723E984C59D580 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoramaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70DA65B8402A4C1CB40F18B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Photorama/Pods-Photorama-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealmDataSources/RxRealmDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealmDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Photorama/Pods-Photorama-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8655CD77796646361E47528F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoramaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7E3353521F66AED003736BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B797C66C21F944150058B165 /* Photo+CoreDataClass.swift in Sources */,
+				B70B060421FE31FE0096453F /* ImageCache.swift in Sources */,
+				B70B060F21FE6D450096453F /* PhotosListViewModel.swift in Sources */,
+				B70B060821FE3EB70096453F /* Foto.swift in Sources */,
 				B7E3353F21F66AED003736BA /* PhotosViewController.swift in Sources */,
+				B70B060221FE2F5D0096453F /* PhotosRepo.swift in Sources */,
 				B7E3353D21F66AED003736BA /* AppDelegate.swift in Sources */,
 				B7E3356D21F6865A003736BA /* PhotoStore.swift in Sources */,
 				B7E3357521F88B16003736BA /* ImageStore.swift in Sources */,
 				B7E3357121F7FAE3003736BA /* PhotoDataSource.swift in Sources */,
 				B797C66921F93CB50058B165 /* Photorama.xcdatamodeld in Sources */,
 				B7E3357321F7FFDE003736BA /* PhotoCell.swift in Sources */,
+				B70B060621FE34650096453F /* PhotoramaApi.swift in Sources */,
 				B797C66D21F944150058B165 /* Photo+CoreDataProperties.swift in Sources */,
 				B7E3356B21F674DF003736BA /* FlickrApi.swift in Sources */,
+				B70B060D21FE6D380096453F /* PhotoDetailViewModel.swift in Sources */,
 				B7E3357721F89284003736BA /* PhotoInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +675,7 @@
 		};
 		B7E3356221F66AEE003736BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3340BF02C5A84C4DD69C8574 /* Pods-Photorama.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +694,7 @@
 		};
 		B7E3356321F66AEE003736BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2541E298B2F8102195BD8E /* Pods-Photorama.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +713,7 @@
 		};
 		B7E3356521F66AEE003736BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F4599CB78EDFF0BAAD0D0D /* Pods-PhotoramaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +735,7 @@
 		};
 		B7E3356621F66AEE003736BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B4C589BD2203AF83F9066B /* Pods-PhotoramaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +757,7 @@
 		};
 		B7E3356821F66AEE003736BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6207ECFD1CA39ACA00D63803 /* Pods-PhotoramaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +778,7 @@
 		};
 		B7E3356921F66AEE003736BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50814ABB5C6260BC30E75F28 /* Pods-PhotoramaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
