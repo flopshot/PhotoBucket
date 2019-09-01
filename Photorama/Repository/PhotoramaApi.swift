@@ -14,7 +14,6 @@ import RxAlamofire
 
 protocol PhotoramaApi {
     func fetchPhotos() -> Observable<[Foto]>
-    func fetchImage(_ urlString: String) -> Observable<UIImage?>
 }
 
 class PhotoramaApiImpl: PhotoramaApi {
@@ -35,13 +34,6 @@ class PhotoramaApiImpl: PhotoramaApi {
                 }
                 return try! processor.processFotos(json)
             })
-    }
-    
-    func fetchImage(_ urlString: String) -> Observable<UIImage?> {
-        return RxAlamofire.requestData(.get, urlString)
-            .map { (r, response) in
-                return UIImage(data: response, scale: 1.0)
-            }
     }
     
     private func flickrURL() -> String {
@@ -108,4 +100,12 @@ class FotosProcessorImpl: FotosProcessor {
 
 enum PhotoramaError: Error {
     case invalidJSONData
+}
+
+enum FlickrError: Error {
+    case invalidJSONData
+}
+
+enum Method: String {
+    case interestingPhotos = "flickr.interestingness.getList"
 }

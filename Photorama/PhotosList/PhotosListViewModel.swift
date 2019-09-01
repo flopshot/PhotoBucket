@@ -14,29 +14,22 @@ import RealmSwift
 class PhotosListViewModel {
     
     private let photosRepo: PhotosRepo
-    private var currentFotos: [Foto] = []
-    
-    func getPhoto(at index: Int) -> Foto? {
-        if 0 <= index && index < currentFotos.count {
-            return currentFotos[index]
-        } else {
-            return nil
-        }
-    }
     
     init(_ photosRepo: PhotosRepo) {
         self.photosRepo = photosRepo
     }
     
-    func getPhotosObservable() -> Observable<(AnyRealmCollection<Foto>, RealmChangeset?)> {
+    func getPhotosObservable() -> Observable<[Foto]> {
         return photosRepo.getPhotos()
     }
     
     func fetchPhotos() -> Disposable {
         return photosRepo.fetchPhotos()
-            .do(onNext: { [weak self] fotos in
-                self?.currentFotos = fotos
-            })
-            .subscribe(Realm.rx.add(update: true))
+                .subscribe(onNext: { (foto) in
+                    let realm = try! Realm()
+                    try! realm.write {
+                        realm.add(foto, update: Realm.UpdatePolicy.modified)
+                    }
+                })
     }
 }

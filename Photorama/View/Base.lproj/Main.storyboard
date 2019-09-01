@@ -38,24 +38,17 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-6A-phh">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 </imageView>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-Zr-jy7">
-                                                    <rect key="frame" x="35" y="35" width="20" height="20"/>
-                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Lq4-Zr-jy7" firstAttribute="centerY" secondItem="yPW-DL-AO2" secondAttribute="centerY" id="0KY-RP-7RT"/>
                                             <constraint firstAttribute="bottom" secondItem="Ye6-6A-phh" secondAttribute="bottom" id="4lo-yd-3UY"/>
-                                            <constraint firstItem="Lq4-Zr-jy7" firstAttribute="centerX" secondItem="yPW-DL-AO2" secondAttribute="centerX" id="N32-kK-kdN"/>
                                             <constraint firstAttribute="trailing" secondItem="Ye6-6A-phh" secondAttribute="trailing" id="PS3-vr-2Cg"/>
                                             <constraint firstItem="Ye6-6A-phh" firstAttribute="top" secondItem="yPW-DL-AO2" secondAttribute="top" id="jWD-g9-bdj"/>
                                             <constraint firstItem="Ye6-6A-phh" firstAttribute="leading" secondItem="yPW-DL-AO2" secondAttribute="leading" id="vU4-6V-cOR"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Ye6-6A-phh" id="dXO-ha-tnX"/>
-                                            <outlet property="spinner" destination="Lq4-Zr-jy7" id="zhv-Jx-cIu"/>
-                                            <segue destination="fZz-zf-Oav" kind="show" identifier="showPhoto" id="RSW-oo-yeT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -79,16 +72,16 @@
             </objects>
             <point key="canvasLocation" x="-538" y="601"/>
         </scene>
-        <!--Photo Info View Conrtroller-->
+        <!--Photo Info View Controller-->
         <scene sceneID="qwg-Z0-spq">
             <objects>
-                <viewController id="fZz-zf-Oav" customClass="PhotoInfoViewConrtroller" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fZz-zf-Oav" customClass="PhotoInfoViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wtm-du-e8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s5k-Gs-RKL">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s5k-Gs-RKL">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
