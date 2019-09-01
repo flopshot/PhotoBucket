@@ -14,6 +14,7 @@
 		B70B060621FE34650096453F /* PhotoramaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060521FE34650096453F /* PhotoramaApi.swift */; };
 		B70B060821FE3EB70096453F /* Foto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060721FE3EB70096453F /* Foto.swift */; };
 		B70B060F21FE6D450096453F /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70B060E21FE6D450096453F /* PhotosListViewModel.swift */; };
+		B7887169231C1623005D5A3E /* MockPhotosRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7887168231C1623005D5A3E /* MockPhotosRepo.swift */; };
 		B797C66921F93CB50058B165 /* Photorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B797C66721F93CB50058B165 /* Photorama.xcdatamodeld */; };
 		B797C66C21F944150058B165 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797C66A21F944150058B165 /* Photo+CoreDataClass.swift */; };
 		B797C66D21F944150058B165 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B797C66B21F944150058B165 /* Photo+CoreDataProperties.swift */; };
@@ -22,7 +23,7 @@
 		B7E3354221F66AED003736BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E3354021F66AED003736BA /* Main.storyboard */; };
 		B7E3354421F66AEE003736BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E3354321F66AEE003736BA /* Assets.xcassets */; };
 		B7E3354721F66AEE003736BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E3354521F66AEE003736BA /* LaunchScreen.storyboard */; };
-		B7E3355221F66AEE003736BA /* PhotoramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3355121F66AEE003736BA /* PhotoramaTests.swift */; };
+		B7E3355221F66AEE003736BA /* PhotosListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3355121F66AEE003736BA /* PhotosListViewModelTest.swift */; };
 		B7E3355D21F66AEE003736BA /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3355C21F66AEE003736BA /* PhotoramaUITests.swift */; };
 		B7E3357321F7FFDE003736BA /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3357221F7FFDE003736BA /* PhotoCell.swift */; };
 		B7E3357721F89284003736BA /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E3357621F89284003736BA /* PhotoInfoViewController.swift */; };
@@ -57,6 +58,7 @@
 		B70B060521FE34650096453F /* PhotoramaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaApi.swift; sourceTree = "<group>"; };
 		B70B060721FE3EB70096453F /* Foto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foto.swift; sourceTree = "<group>"; };
 		B70B060E21FE6D450096453F /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
+		B7887168231C1623005D5A3E /* MockPhotosRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotosRepo.swift; sourceTree = "<group>"; };
 		B797C66821F93CB50058B165 /* Photorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photorama.xcdatamodel; sourceTree = "<group>"; };
 		B797C66A21F944150058B165 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B797C66B21F944150058B165 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		B7E3354621F66AEE003736BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E3354821F66AEE003736BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E3354D21F66AEE003736BA /* PhotoramaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoramaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E3355121F66AEE003736BA /* PhotoramaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaTests.swift; sourceTree = "<group>"; };
+		B7E3355121F66AEE003736BA /* PhotosListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModelTest.swift; sourceTree = "<group>"; };
 		B7E3355321F66AEE003736BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E3355821F66AEE003736BA /* PhotoramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E3355C21F66AEE003736BA /* PhotoramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaUITests.swift; sourceTree = "<group>"; };
@@ -167,6 +169,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B7887167231C1518005D5A3E /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				B7887168231C1623005D5A3E /* MockPhotosRepo.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
 		B7E3353021F66AEC003736BA = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +219,8 @@
 		B7E3355021F66AEE003736BA /* PhotoramaTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3355121F66AEE003736BA /* PhotoramaTests.swift */,
+				B7887167231C1518005D5A3E /* PhotosList */,
+				B7E3355121F66AEE003736BA /* PhotosListViewModelTest.swift */,
 				B7E3355321F66AEE003736BA /* Info.plist */,
 			);
 			path = PhotoramaTests;
@@ -300,7 +311,6 @@
 					};
 					B7E3354C21F66AEE003736BA = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = B7E3353821F66AED003736BA;
 					};
 					B7E3355721F66AEE003736BA = {
 						CreatedOnToolsVersion = 10.1;
@@ -487,7 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E3355221F66AEE003736BA /* PhotoramaTests.swift in Sources */,
+				B7887169231C1623005D5A3E /* MockPhotosRepo.swift in Sources */,
+				B7E3355221F66AEE003736BA /* PhotosListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +704,6 @@
 			baseConfigurationReference = 86F4599CB78EDFF0BAAD0D0D /* Pods-PhotoramaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GDW23S6SR;
 				INFOPLIST_FILE = PhotoramaTests/Info.plist;
@@ -706,7 +716,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama.app/Photorama";
 			};
 			name = Debug;
 		};
@@ -715,7 +724,6 @@
 			baseConfigurationReference = 98B4C589BD2203AF83F9066B /* Pods-PhotoramaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GDW23S6SR;
 				INFOPLIST_FILE = PhotoramaTests/Info.plist;
@@ -728,7 +736,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photorama.app/Photorama";
 			};
 			name = Release;
 		};
