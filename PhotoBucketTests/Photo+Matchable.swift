@@ -8,7 +8,7 @@
 
 import Foundation
 import Cuckoo
-@testable import Photorama
+@testable import PhotoBucket
 
 extension Photo: Matchable {
     public var matcher: ParameterMatcher<Photo> {

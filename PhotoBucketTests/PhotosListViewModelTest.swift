@@ -10,7 +10,7 @@ import XCTest
 import Cuckoo
 import RxSwift
 import RxBlocking
-@testable import Photorama
+@testable import PhotoBucket
 
 class PhotosListViewModelTests: XCTestCase {
     

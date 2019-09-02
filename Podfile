@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Photorama' do
+target 'PhotoBucket' do
   use_frameworks!
 
   # Pods for Photorama
@@ -14,7 +14,7 @@ target 'Photorama' do
   pod 'RxAlamofire'
   pod 'RxRealm'
 
-  target 'PhotoramaTests' do
+  target 'PhotoBucketTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Cuckoo'

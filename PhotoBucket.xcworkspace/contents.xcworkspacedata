@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Photorama.xcodeproj">
+      location = "group:/Users/seannajera/XcodeProjects/Photorama/PhotoBucket.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PhotoBucket.xcodeproj">
    </FileRef>
 </Workspace>
