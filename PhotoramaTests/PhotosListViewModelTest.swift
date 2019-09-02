@@ -29,40 +29,40 @@ class PhotosListViewModelTests: XCTestCase {
     func testGetPhotosObservable() {
         
         // ARRANGE
-        let resultFoto = Foto()
-        resultFoto.photoID = "1"
-        resultFoto.title = "Hi"
-        resultFoto.dateTaken = Date()
-        resultFoto.photoPath = "path/to/foto"
-        resultFoto.urlString = "url.string"
+        let resultPhoto = Photo()
+        resultPhoto.photoId = "1"
+        resultPhoto.title = "Hi"
+        resultPhoto.dateTaken = Date()
+        resultPhoto.photoPath = "path/to/foto"
+        resultPhoto.urlString = "url.string"
         
         stub(photosRepo) { stub in
-            when(stub.getPhotos()).thenReturn(Observable.just([resultFoto]))
+            when(stub.getPhotos()).thenReturn(Observable.just([resultPhoto]))
         }
         
         // ACT
         let photosObservable = self.photosListViewModel.getPhotosObservable()
         
         // ASSERT
-        XCTAssertEqual(try photosObservable.toBlocking().first(), [resultFoto])
+        XCTAssertEqual(try photosObservable.toBlocking().first(), [resultPhoto])
     }
     
     func testFetchPhotos() {
         // ARRANGE
-        let resultFoto = Foto()
-        resultFoto.photoID = "1"
-        resultFoto.title = "Hi"
-        resultFoto.dateTaken = Date()
-        resultFoto.photoPath = "path/to/foto"
-        resultFoto.urlString = "url.string"
+        let resultPhoto = Photo()
+        resultPhoto.photoId = "1"
+        resultPhoto.title = "Hi"
+        resultPhoto.dateTaken = Date()
+        resultPhoto.photoPath = "path/to/foto"
+        resultPhoto.urlString = "url.string"
         
         stub(self.photosRepo) { stub in
-            when(stub.fetchPhotos()).thenReturn(Observable.just(resultFoto))
+            when(stub.fetchPhotos()).thenReturn(Observable.just(resultPhoto))
         }
         
         stub(self.realmManager) { stub in
-            when(stub.insert(any(Foto.self))).then { foto in
-                print(foto)
+            when(stub.insert(any(Photo.self))).then { photo in
+                print(photo)
             }
         }
         
@@ -70,7 +70,7 @@ class PhotosListViewModelTests: XCTestCase {
         _ = photosListViewModel.fetchPhotos()
         
         // ASSERT
-        verify(realmManager).insert(resultFoto)
+        verify(realmManager).insert(resultPhoto)
     }
 
 }

@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Photorama/Repository/PhotosRepo.swift at 2019-09-02 10:41:23 +0000
+// MARK: - Mocks generated from file: Photorama/Repository/PhotosRepo.swift at 2019-09-02 11:03:30 +0000
 
 //
 //  PhotosRepo.swift
@@ -43,9 +43,9 @@ import UIKit
     
     
     
-     func getPhotos() -> Observable<[Foto]> {
+     func getPhotos() -> Observable<[Photo]> {
         
-    return cuckoo_manager.call("getPhotos() -> Observable<[Foto]>",
+    return cuckoo_manager.call("getPhotos() -> Observable<[Photo]>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -58,9 +58,9 @@ import UIKit
     
     
     
-     func getPhoto(_ photoId: String) -> Observable<Foto> {
+     func getPhoto(_ photoId: String) -> Observable<Photo> {
         
-    return cuckoo_manager.call("getPhoto(_: String) -> Observable<Foto>",
+    return cuckoo_manager.call("getPhoto(_: String) -> Observable<Photo>",
             parameters: (photoId),
             escapingParameters: (photoId),
             superclassCall:
@@ -73,9 +73,9 @@ import UIKit
     
     
     
-     func fetchPhotos() -> Observable<Foto> {
+     func fetchPhotos() -> Observable<Photo> {
         
-    return cuckoo_manager.call("fetchPhotos() -> Observable<Foto>",
+    return cuckoo_manager.call("fetchPhotos() -> Observable<Photo>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -95,19 +95,19 @@ import UIKit
 	    }
 	    
 	    
-	    func getPhotos() -> Cuckoo.ProtocolStubFunction<(), Observable<[Foto]>> {
+	    func getPhotos() -> Cuckoo.ProtocolStubFunction<(), Observable<[Photo]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "getPhotos() -> Observable<[Foto]>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "getPhotos() -> Observable<[Photo]>", parameterMatchers: matchers))
 	    }
 	    
-	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ProtocolStubFunction<(String), Observable<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ProtocolStubFunction<(String), Observable<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "getPhoto(_: String) -> Observable<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "getPhoto(_: String) -> Observable<Photo>", parameterMatchers: matchers))
 	    }
 	    
-	    func fetchPhotos() -> Cuckoo.ProtocolStubFunction<(), Observable<Foto>> {
+	    func fetchPhotos() -> Cuckoo.ProtocolStubFunction<(), Observable<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "fetchPhotos() -> Observable<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepo.self, method: "fetchPhotos() -> Observable<Photo>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -127,21 +127,21 @@ import UIKit
 	
 	    
 	    @discardableResult
-	    func getPhotos() -> Cuckoo.__DoNotUse<(), Observable<[Foto]>> {
+	    func getPhotos() -> Cuckoo.__DoNotUse<(), Observable<[Photo]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("getPhotos() -> Observable<[Foto]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhotos() -> Observable<[Photo]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Observable<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Observable<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return cuckoo_manager.verify("getPhoto(_: String) -> Observable<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhoto(_: String) -> Observable<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func fetchPhotos() -> Cuckoo.__DoNotUse<(), Observable<Foto>> {
+	    func fetchPhotos() -> Cuckoo.__DoNotUse<(), Observable<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("fetchPhotos() -> Observable<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("fetchPhotos() -> Observable<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -153,16 +153,16 @@ import UIKit
     
 
     
-     func getPhotos() -> Observable<[Foto]>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<[Foto]>).self)
+     func getPhotos() -> Observable<[Photo]>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<[Photo]>).self)
     }
     
-     func getPhoto(_ photoId: String) -> Observable<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<Foto>).self)
+     func getPhoto(_ photoId: String) -> Observable<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<Photo>).self)
     }
     
-     func fetchPhotos() -> Observable<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<Foto>).self)
+     func fetchPhotos() -> Observable<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<Photo>).self)
     }
     
 }
@@ -194,9 +194,9 @@ import UIKit
     
     
     
-     override func fetchPhotos() -> Observable<Foto> {
+     override func fetchPhotos() -> Observable<Photo> {
         
-    return cuckoo_manager.call("fetchPhotos() -> Observable<Foto>",
+    return cuckoo_manager.call("fetchPhotos() -> Observable<Photo>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -209,9 +209,9 @@ import UIKit
     
     
     
-     override func getPhotos() -> Observable<[Foto]> {
+     override func getPhotos() -> Observable<[Photo]> {
         
-    return cuckoo_manager.call("getPhotos() -> Observable<[Foto]>",
+    return cuckoo_manager.call("getPhotos() -> Observable<[Photo]>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -224,9 +224,9 @@ import UIKit
     
     
     
-     override func getPhoto(_ photoId: String) -> Observable<Foto> {
+     override func getPhoto(_ photoId: String) -> Observable<Photo> {
         
-    return cuckoo_manager.call("getPhoto(_: String) -> Observable<Foto>",
+    return cuckoo_manager.call("getPhoto(_: String) -> Observable<Photo>",
             parameters: (photoId),
             escapingParameters: (photoId),
             superclassCall:
@@ -246,19 +246,19 @@ import UIKit
 	    }
 	    
 	    
-	    func fetchPhotos() -> Cuckoo.ClassStubFunction<(), Observable<Foto>> {
+	    func fetchPhotos() -> Cuckoo.ClassStubFunction<(), Observable<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "fetchPhotos() -> Observable<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "fetchPhotos() -> Observable<Photo>", parameterMatchers: matchers))
 	    }
 	    
-	    func getPhotos() -> Cuckoo.ClassStubFunction<(), Observable<[Foto]>> {
+	    func getPhotos() -> Cuckoo.ClassStubFunction<(), Observable<[Photo]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "getPhotos() -> Observable<[Foto]>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "getPhotos() -> Observable<[Photo]>", parameterMatchers: matchers))
 	    }
 	    
-	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ClassStubFunction<(String), Observable<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ClassStubFunction<(String), Observable<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "getPhoto(_: String) -> Observable<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockPhotosRepoImpl.self, method: "getPhoto(_: String) -> Observable<Photo>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -278,21 +278,21 @@ import UIKit
 	
 	    
 	    @discardableResult
-	    func fetchPhotos() -> Cuckoo.__DoNotUse<(), Observable<Foto>> {
+	    func fetchPhotos() -> Cuckoo.__DoNotUse<(), Observable<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("fetchPhotos() -> Observable<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("fetchPhotos() -> Observable<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func getPhotos() -> Cuckoo.__DoNotUse<(), Observable<[Foto]>> {
+	    func getPhotos() -> Cuckoo.__DoNotUse<(), Observable<[Photo]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("getPhotos() -> Observable<[Foto]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhotos() -> Observable<[Photo]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Observable<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Observable<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return cuckoo_manager.verify("getPhoto(_: String) -> Observable<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhoto(_: String) -> Observable<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -304,22 +304,22 @@ import UIKit
     
 
     
-     override func fetchPhotos() -> Observable<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<Foto>).self)
+     override func fetchPhotos() -> Observable<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<Photo>).self)
     }
     
-     override func getPhotos() -> Observable<[Foto]>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<[Foto]>).self)
+     override func getPhotos() -> Observable<[Photo]>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<[Photo]>).self)
     }
     
-     override func getPhoto(_ photoId: String) -> Observable<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<Foto>).self)
+     override func getPhoto(_ photoId: String) -> Observable<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<Photo>).self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: Photorama/Repository/RealmManager.swift at 2019-09-02 10:41:23 +0000
+// MARK: - Mocks generated from file: Photorama/Repository/RealmManager.swift at 2019-09-02 11:03:30 +0000
 
 //
 //  RealmManager.swift
@@ -361,46 +361,46 @@ import RealmSwift
     
     
     
-     override func insert(_ foto: Foto)  {
+     override func insert(_ photo: Photo)  {
         
-    return cuckoo_manager.call("insert(_: Foto)",
-            parameters: (foto),
-            escapingParameters: (foto),
+    return cuckoo_manager.call("insert(_: Photo)",
+            parameters: (photo),
+            escapingParameters: (photo),
             superclassCall:
                 
-                super.insert(foto)
+                super.insert(photo)
                 ,
-            defaultCall: __defaultImplStub!.insert(foto))
+            defaultCall: __defaultImplStub!.insert(photo))
         
     }
     
     
     
-     override func getFoto(_ photoId: String) -> Results<Foto> {
+     override func getPhoto(_ photoId: String) -> Results<Photo> {
         
-    return cuckoo_manager.call("getFoto(_: String) -> Results<Foto>",
+    return cuckoo_manager.call("getPhoto(_: String) -> Results<Photo>",
             parameters: (photoId),
             escapingParameters: (photoId),
             superclassCall:
                 
-                super.getFoto(photoId)
+                super.getPhoto(photoId)
                 ,
-            defaultCall: __defaultImplStub!.getFoto(photoId))
+            defaultCall: __defaultImplStub!.getPhoto(photoId))
         
     }
     
     
     
-     override func getFotos() -> Results<Foto> {
+     override func getPhotos() -> Results<Photo> {
         
-    return cuckoo_manager.call("getFotos() -> Results<Foto>",
+    return cuckoo_manager.call("getPhotos() -> Results<Photo>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
                 
-                super.getFotos()
+                super.getPhotos()
                 ,
-            defaultCall: __defaultImplStub!.getFotos())
+            defaultCall: __defaultImplStub!.getPhotos())
         
     }
     
@@ -413,19 +413,19 @@ import RealmSwift
 	    }
 	    
 	    
-	    func insert<M1: Cuckoo.Matchable>(_ foto: M1) -> Cuckoo.ClassStubNoReturnFunction<(Foto)> where M1.MatchedType == Foto {
-	        let matchers: [Cuckoo.ParameterMatcher<(Foto)>] = [wrap(matchable: foto) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "insert(_: Foto)", parameterMatchers: matchers))
+	    func insert<M1: Cuckoo.Matchable>(_ photo: M1) -> Cuckoo.ClassStubNoReturnFunction<(Photo)> where M1.MatchedType == Photo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Photo)>] = [wrap(matchable: photo) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "insert(_: Photo)", parameterMatchers: matchers))
 	    }
 	    
-	    func getFoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ClassStubFunction<(String), Results<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.ClassStubFunction<(String), Results<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "getFoto(_: String) -> Results<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "getPhoto(_: String) -> Results<Photo>", parameterMatchers: matchers))
 	    }
 	    
-	    func getFotos() -> Cuckoo.ClassStubFunction<(), Results<Foto>> {
+	    func getPhotos() -> Cuckoo.ClassStubFunction<(), Results<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "getFotos() -> Results<Foto>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockRealmManager.self, method: "getPhotos() -> Results<Photo>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -445,21 +445,21 @@ import RealmSwift
 	
 	    
 	    @discardableResult
-	    func insert<M1: Cuckoo.Matchable>(_ foto: M1) -> Cuckoo.__DoNotUse<(Foto), Void> where M1.MatchedType == Foto {
-	        let matchers: [Cuckoo.ParameterMatcher<(Foto)>] = [wrap(matchable: foto) { $0 }]
-	        return cuckoo_manager.verify("insert(_: Foto)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func insert<M1: Cuckoo.Matchable>(_ photo: M1) -> Cuckoo.__DoNotUse<(Photo), Void> where M1.MatchedType == Photo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Photo)>] = [wrap(matchable: photo) { $0 }]
+	        return cuckoo_manager.verify("insert(_: Photo)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func getFoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Results<Foto>> where M1.MatchedType == String {
+	    func getPhoto<M1: Cuckoo.Matchable>(_ photoId: M1) -> Cuckoo.__DoNotUse<(String), Results<Photo>> where M1.MatchedType == String {
 	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: photoId) { $0 }]
-	        return cuckoo_manager.verify("getFoto(_: String) -> Results<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhoto(_: String) -> Results<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	    @discardableResult
-	    func getFotos() -> Cuckoo.__DoNotUse<(), Results<Foto>> {
+	    func getPhotos() -> Cuckoo.__DoNotUse<(), Results<Photo>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("getFotos() -> Results<Foto>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getPhotos() -> Results<Photo>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -471,16 +471,16 @@ import RealmSwift
     
 
     
-     override func insert(_ foto: Foto)   {
+     override func insert(_ photo: Photo)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-     override func getFoto(_ photoId: String) -> Results<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Results<Foto>).self)
+     override func getPhoto(_ photoId: String) -> Results<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Results<Photo>).self)
     }
     
-     override func getFotos() -> Results<Foto>  {
-        return DefaultValueRegistry.defaultValue(for: (Results<Foto>).self)
+     override func getPhotos() -> Results<Photo>  {
+        return DefaultValueRegistry.defaultValue(for: (Results<Photo>).self)
     }
     
 }

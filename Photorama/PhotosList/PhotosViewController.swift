@@ -27,10 +27,10 @@ class PhotosViewController: UIViewController {
         self.collectionView.delegate = self
 
         viewModel.getPhotosObservable()
-                .subscribe(onNext: { [weak self] newFotos in
-                    let changes = diff(old: (self?.collectionView.dataSource as! PhotosDataSource).getData(), new: newFotos)
+                .subscribe(onNext: { [weak self] newPhotos in
+                    let changes = diff(old: (self?.collectionView.dataSource as! PhotosDataSource).getData(), new: newPhotos)
                     self?.collectionView.reload(changes: changes, updateData: {
-                        (self?.collectionView.dataSource as! PhotosDataSource).updateData(newFotos: newFotos)
+                        (self?.collectionView.dataSource as! PhotosDataSource).updateData(newPhotos: newPhotos)
                     })
                 },
                 onError: { error in
@@ -57,31 +57,31 @@ extension PhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let cell = cell as! PhotoCell
         cell.imageView.image = nil
-        cell.imageView.af_setImage(withURL: dataSource.getFoto(at: indexPath.row).url)
+        cell.imageView.af_setImage(withURL: dataSource.getPhoto(at: indexPath.row).url)
     }
 
     private func pushDetailViewController(_ rowIndex: Int) {
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "PhotoInfoViewController") as! PhotoInfoViewController
 
-        detailViewController.foto = (self.collectionView.dataSource as! PhotosDataSource).getFoto(at: rowIndex)
+        detailViewController.photo = (self.collectionView.dataSource as! PhotosDataSource).getPhoto(at: rowIndex)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
 class PhotosDataSource: NSObject, UICollectionViewDataSource {
     
-    private var data: [Foto] = []
+    private var data: [Photo] = []
     
-    func getData() -> [Foto] {
+    func getData() -> [Photo] {
         return data
     }
 
-    func updateData(newFotos data: [Foto]) {
-        self.data = data.map{$0.copy() as! Foto}
+    func updateData(newPhotos data: [Photo]) {
+        self.data = data.map{$0.copy() as! Photo}
     }
 
-    func getFoto(at index: Int) -> Foto {
+    func getPhoto(at index: Int) -> Photo {
         return data[index]
     }
 

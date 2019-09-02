@@ -13,26 +13,26 @@ import Alamofire
 import RxAlamofire
 
 protocol PhotoramaApi {
-    func fetchPhotos() -> Observable<[Foto]>
+    func fetchPhotos() -> Observable<[Photo]>
 }
 
 class PhotoramaApiImpl: PhotoramaApi {
     
-    private let fotosProcessor: FotosProcessor
+    private let photosProcessor: PhotosProcessor
     private let baseURLString = "https://api.flickr.com/services/rest"
     private let apiKey = "a6d819499131071f158fd740860a5a88"
     
-    required init(_ fotosProcessor: FotosProcessor) {
-        self.fotosProcessor = fotosProcessor
+    required init(_ photosProcessor: PhotosProcessor) {
+        self.photosProcessor = photosProcessor
     }
     
-    func fetchPhotos() -> Observable<[Foto]> {
+    func fetchPhotos() -> Observable<[Photo]> {
         return RxAlamofire.requestJSON(.get, flickrURL())
             .map({[weak self] (r, json) in
-                guard let processor = self?.fotosProcessor else {
+                guard let processor = self?.photosProcessor else {
                     throw PhotoramaError.invalidJSONData
                 }
-                return try! processor.processFotos(json)
+                return try! processor.processPhotos(json)
             })
     }
     

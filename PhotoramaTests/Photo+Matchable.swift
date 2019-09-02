@@ -1,5 +1,5 @@
 //
-//  Foto+Matchable.swift
+//  Photo+Matchable.swift
 //  PhotoramaTests
 //
 //  Created by Sean Najera on 9/2/19.
@@ -10,8 +10,8 @@ import Foundation
 import Cuckoo
 @testable import Photorama
 
-extension Foto: Matchable {
-    public var matcher: ParameterMatcher<Foto> {
+extension Photo: Matchable {
+    public var matcher: ParameterMatcher<Photo> {
         return ParameterMatcher { tested in
             tested.isEqual(self)
         }

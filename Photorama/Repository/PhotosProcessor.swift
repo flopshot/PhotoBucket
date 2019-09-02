@@ -1,5 +1,5 @@
 //
-//  FotosProcessor.swift
+//  PhotosProcessor.swift
 //  Photorama
 //
 //  Created by Sean Najera on 9/2/19.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol FotosProcessor {
-    func processFotos(_ json: Any) throws -> [Foto]
+protocol PhotosProcessor {
+    func processPhotos(_ json: Any) throws -> [Photo]
 }
 
-class FotosProcessorImpl: FotosProcessor {
+class PhotosProcessorImpl: PhotosProcessor {
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -20,7 +20,7 @@ class FotosProcessorImpl: FotosProcessor {
         return formatter
     }()
     
-    func processFotos(_ json: Any) throws -> [Foto] {
+    func processPhotos(_ json: Any) throws -> [Photo] {
         guard
             let jsonDictionary = json as? [AnyHashable:Any],
             let photos = jsonDictionary["photos"] as? [String:Any],
@@ -28,22 +28,22 @@ class FotosProcessorImpl: FotosProcessor {
                 throw PhotoramaError.invalidJSONData
         }
         
-        var finalPhotos = [Foto]()
+        var finalPhotos = [Photo]()
         for json in photosArray {
             guard
                 let title = json["title"] as? String,
-                let photoID = json["id"] as? String,
+                let photoId = json["id"] as? String,
                 let dateString = json["datetaken"] as? String,
                 let photoURLString = json["url_h"] as? String,
                 let dateTaken = self.dateFormatter.date(from: dateString) else {
                     continue
             }
-            let foto = Foto()
-            foto.dateTaken = dateTaken
-            foto.photoID = photoID
-            foto.title = title
-            foto.urlString = photoURLString
-            finalPhotos.append(foto)
+            let photo = Photo()
+            photo.dateTaken = dateTaken
+            photo.photoId = photoId
+            photo.title = title
+            photo.urlString = photoURLString
+            finalPhotos.append(photo)
         }
         return finalPhotos
     }

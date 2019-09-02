@@ -10,21 +10,21 @@ import Foundation
 import RealmSwift
 
 class RealmManager {
-    func insert(_ foto: Foto) {
+    func insert(_ photo: Photo) {
         let realm = try! Realm()
         try! realm.write {
-            realm.add(foto, update: Realm.UpdatePolicy.modified)
+            realm.add(photo, update: Realm.UpdatePolicy.modified)
         }
     }
     
-    func getFoto(_ photoId: String) -> Results<Foto> {
-        let resultFoto = try! Realm().objects(Foto.self).filter("photoID = '\(photoId)'")
-        return resultFoto
+    func getPhoto(_ photoId: String) -> Results<Photo> {
+        let resultPhoto = try! Realm().objects(Photo.self).filter("photoId = '\(photoId)'")
+        return resultPhoto
     }
     
-    func getFotos() -> Results<Foto> {
+    func getPhotos() -> Results<Photo> {
         let realm = try! Realm()
-        let resultFotos = realm.objects(Foto.self).sorted(byKeyPath: "dateTaken", ascending: false)
-        return resultFotos
+        let resultPhotos = realm.objects(Photo.self).sorted(byKeyPath: "dateTaken", ascending: false)
+        return resultPhotos
     }
 }

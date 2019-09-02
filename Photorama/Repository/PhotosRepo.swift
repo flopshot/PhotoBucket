@@ -13,9 +13,9 @@ import RxRealm
 import RealmSwift
 
 protocol PhotosRepo {
-    func getPhotos() -> Observable<[Foto]>
-    func getPhoto(_ photoId: String) -> Observable<Foto>
-    func fetchPhotos() -> Observable<Foto>
+    func getPhotos() -> Observable<[Photo]>
+    func getPhoto(_ photoId: String) -> Observable<Photo>
+    func fetchPhotos() -> Observable<Photo>
 }
 
 class PhotosRepoImpl: PhotosRepo {
@@ -28,24 +28,24 @@ class PhotosRepoImpl: PhotosRepo {
         self.realmManager = realmManager
     }
     
-    func fetchPhotos() -> Observable<Foto> {
+    func fetchPhotos() -> Observable<Photo> {
         return photoramaApi
             .fetchPhotos()
-            .flatMap { (fotos: [Foto]) throws -> Observable<Foto> in
-                Observable.from(fotos)
+            .flatMap { (photos: [Photo]) throws -> Observable<Photo> in
+                Observable.from(photos)
             }
     }
     
-    func getPhotos() -> Observable<[Foto]> {
-        let results = realmManager.getFotos()
+    func getPhotos() -> Observable<[Photo]> {
+        let results = realmManager.getPhotos()
         return Observable.array(from: results, synchronousStart: false)
     }
     
-    func getPhoto(_ photoId: String) -> Observable<Foto> {
-        let result = realmManager.getFoto(photoId)
+    func getPhoto(_ photoId: String) -> Observable<Photo> {
+        let result = realmManager.getPhoto(photoId)
         return Observable.changeset(from: result, synchronousStart: false)
             .map { (update) in
-                return update.0.first ?? Foto()
+                return update.0.first ?? Photo()
             }
     }
 }

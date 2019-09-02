@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = window!.rootViewController as! UINavigationController
         let photosViewController = rootViewController.topViewController as! PhotosViewController
 
-        let repo = PhotosRepoImpl(PhotoramaApiImpl(FotosProcessorImpl()), RealmManager())
+        let repo = PhotosRepoImpl(PhotoramaApiImpl(PhotosProcessorImpl()), RealmManager())
         photosViewController.viewModel = PhotosListViewModel(repo, RealmManager())
         
         return true

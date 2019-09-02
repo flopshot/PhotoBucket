@@ -21,14 +21,14 @@ class PhotosListViewModel {
         self.realmManager = realmManager
     }
     
-    func getPhotosObservable() -> Observable<[Foto]> {
+    func getPhotosObservable() -> Observable<[Photo]> {
         return photosRepo.getPhotos()
     }
     
     func fetchPhotos() -> Disposable {
         return photosRepo.fetchPhotos()
-                .subscribe(onNext: { [weak self] (foto) in
-                    self?.realmManager.insert(foto)
+                .subscribe(onNext: { [weak self] (photo) in
+                    self?.realmManager.insert(photo)
                 })
     }
 }
