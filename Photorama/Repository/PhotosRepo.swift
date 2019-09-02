@@ -21,9 +21,11 @@ protocol PhotosRepo {
 class PhotosRepoImpl: PhotosRepo {
     
     private let photoramaApi: PhotoramaApi
+    private let realmManager: RealmManager
     
-    required init(_ photoramaApi: PhotoramaApi) {
+    required init(_ photoramaApi: PhotoramaApi, _ realmManager: RealmManager) {
         self.photoramaApi = photoramaApi
+        self.realmManager = realmManager
     }
     
     func fetchPhotos() -> Observable<Foto> {
@@ -35,13 +37,12 @@ class PhotosRepoImpl: PhotosRepo {
     }
     
     func getPhotos() -> Observable<[Foto]> {
-        let realm = try! Realm()
-        let results = realm.objects(Foto.self).sorted(byKeyPath: "dateTaken", ascending: false)
+        let results = realmManager.getFotos()
         return Observable.array(from: results, synchronousStart: false)
     }
     
     func getPhoto(_ photoId: String) -> Observable<Foto> {
-        let result = try! Realm().objects(Foto.self).filter("photoID = '\(photoId)'")
+        let result = realmManager.getFoto(photoId)
         return Observable.changeset(from: result, synchronousStart: false)
             .map { (update) in
                 return update.0.first ?? Foto()

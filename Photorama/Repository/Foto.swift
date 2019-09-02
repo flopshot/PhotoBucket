@@ -25,7 +25,11 @@ class Foto: Object, NSCopying, DiffAware {
     @objc dynamic var photoPath: String? = nil
     @objc dynamic var dateTaken: Date? = nil
     var url: URL {
-        return URL(string: urlString)!
+        if let url = URL(string: urlString) {
+            return url
+        } else {
+            return URL(string: "https://pbs.twimg.com/media/DfKL_yPX4AAAaPG.jpg")!
+        }
     }
     
     override static func primaryKey() -> String {

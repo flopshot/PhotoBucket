@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIImageView.af_sharedImageDownloader = ImageDownloader(
             configuration: ImageDownloader.defaultURLSessionConfiguration(),
-            maximumActiveDownloads: 10,
+            maximumActiveDownloads: 100,
             imageCache: AutoPurgingImageCache(
                 memoryCapacity: 900 * 1024 * 1024,
                 preferredMemoryUsageAfterPurge: 600 * 1024 * 1024
@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = window!.rootViewController as! UINavigationController
         let photosViewController = rootViewController.topViewController as! PhotosViewController
 
-        let repo = PhotosRepoImpl(PhotoramaApiImpl(FotosProcessorImpl()))
-        photosViewController.viewModel = PhotosListViewModel(repo)
+        let repo = PhotosRepoImpl(PhotoramaApiImpl(FotosProcessorImpl()), RealmManager())
+        photosViewController.viewModel = PhotosListViewModel(repo, RealmManager())
         
         return true
     }

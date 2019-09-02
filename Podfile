@@ -17,11 +17,9 @@ target 'Photorama' do
   target 'PhotoramaTests' do
     inherit! :search_paths
     # Pods for testing
-  end
-
-  target 'PhotoramaUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    pod 'Cuckoo'
+    pod 'RxTest'
+    pod 'RxBlocking'
   end
 
 end
