@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: PhotoBucket/Repository/PhotosRepo.swift at 2019-09-02 16:28:12 +0000
+// MARK: - Mocks generated from file: PhotoBucket/Repository/PhotosRepo.swift at 2019-09-02 17:09:06 +0000
 
 //
 //  PhotosRepo.swift
@@ -319,7 +319,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: PhotoBucket/Repository/RealmManager.swift at 2019-09-02 16:28:12 +0000
+// MARK: - Mocks generated from file: PhotoBucket/Repository/RealmManager.swift at 2019-09-02 17:09:06 +0000
 
 //
 //  RealmManager.swift
